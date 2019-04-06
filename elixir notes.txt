@@ -1,0 +1,5 @@
+1.	apply is an kernel function which will be used to call function with dynamic arguments.
+
+	apply(MODULE, :fun_name, [args])
+
+2.	Whenever we are using Code Module, it will have side effect on elixir.
