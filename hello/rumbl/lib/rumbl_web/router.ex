@@ -1,5 +1,5 @@
-defmodule HelloWeb.Router do
-  use HelloWeb, :router
+defmodule RumblWeb.Router do
+  use RumblWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,15 +13,14 @@ defmodule HelloWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb do
+  scope "/", RumblWeb do
     pipe_through :browser
 
-    get "/hello/:name", HelloController, :world
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", HelloWeb do
+  # scope "/api", RumblWeb do
   #   pipe_through :api
   # end
 end
