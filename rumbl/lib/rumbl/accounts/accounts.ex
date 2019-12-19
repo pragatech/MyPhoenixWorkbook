@@ -6,15 +6,15 @@ defmodule Rumbl.Accounts do
     alias Rumbl.Accounts.User
 
     def get_user(id) do
-        Repo.get(User, 1)
+        Repo.get(User, id)
     end
 
     def get_user!(id) do
-        Repo.get!(User, 1)
+        Repo.get!(User, id)
     end
 
     def get_user_by(params) do
-       Repo.get_user_by(User, params)
+       Repo.get_by(User, params)
     end
 
     def list_users() do
