@@ -61,7 +61,7 @@ defmodule RumblWeb.VideoController do
     |> redirect(to: Routes.video_path(conn, :index))
   end
 
-  def action(conn, opts) do
+  def action(conn, _opts) do
     args = [conn, conn.params, conn.assigns.current_user]
     apply(__MODULE__, action_name(conn), args)
   end
