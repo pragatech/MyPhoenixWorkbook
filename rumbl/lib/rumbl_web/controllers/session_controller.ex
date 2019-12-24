@@ -7,7 +7,7 @@ defmodule RumblWeb.SessionController do
 
   def create(
     conn,
-    %{session: %{
+    %{"session" => %{
       "username" => username,
       "password" => given_pass
     }}) do
